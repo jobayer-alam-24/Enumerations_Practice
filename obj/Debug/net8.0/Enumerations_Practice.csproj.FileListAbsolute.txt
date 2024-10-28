@@ -1,0 +1,15 @@
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\bin\Debug\net8.0\Enumerations_Practice.exe
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\bin\Debug\net8.0\Enumerations_Practice.deps.json
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\bin\Debug\net8.0\Enumerations_Practice.runtimeconfig.json
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\bin\Debug\net8.0\Enumerations_Practice.dll
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\bin\Debug\net8.0\Enumerations_Practice.pdb
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\Enumerations_Practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\Enumerations_Practice.AssemblyInfoInputs.cache
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\Enumerations_Practice.AssemblyInfo.cs
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\Enumerations_Practice.csproj.CoreCompileInputs.cache
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\Enumerations_Practice.sourcelink.json
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\Enumerations_Practice.dll
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\refint\Enumerations_Practice.dll
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\Enumerations_Practice.pdb
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\Enumerations_Practice.genruntimeconfig.cache
+C:\Users\JOBAYER\OneDrive\Tài liệu\Enumerations_Practice\obj\Debug\net8.0\ref\Enumerations_Practice.dll
