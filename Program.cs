@@ -47,7 +47,7 @@ namespace Enumerations_Practice
                 employees.CreateEmployee(InternEmployee);
                 employees.CreateEmployee(ContractEmployee);
                 employees.PrintEmployee(3);
-                employees.UpdateEmployee(3, PartTimeEmployeeUpdatedToFulltime);
+                Console.WriteLine(employees.UpdateEmployee(3, PartTimeEmployeeUpdatedToFulltime));
                 employees.PrintEmployee(2);
 
                 EmployeeService getEmployee = employees.GetEmployee(3);
@@ -55,6 +55,7 @@ namespace Enumerations_Practice
                 Console.WriteLine($"Employee Name: {getEmployee.Employee_Name}");
                 Console.WriteLine($"Employee Type: {getEmployee.Employee_Type}");
 
+                Console.WriteLine(employees.RemoveEmployee(2));
             }
             catch(Exception ex)
             {

@@ -11,6 +11,6 @@ namespace Enumerations_Practice.interfaces
         void CreateEmployee(EmployeeService employee);
         EmployeeService GetEmployee(int id);
         string UpdateEmployee(int id, EmployeeService service);
-        
+        string RemoveEmployee(int id);
     }
 }

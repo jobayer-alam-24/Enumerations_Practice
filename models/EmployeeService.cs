@@ -70,8 +70,18 @@ namespace Enumerations_Practice.models
             getEmployee.Employee_Name = service.Employee_Name;
             getEmployee.Employee_Type = service.Employee_Type;
             employeeServicesList.Add(getEmployee);
-            
+
             return "Messege: Updated Successfully!";
+        }
+        public string RemoveEmployee(int id)
+        {
+            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
+            
+            EmployeeService get = employeeServicesList.FirstOrDefault(single => single.Employee_ID == id);
+            if(get == null) throw new ArgumentException("Empty Employee Lists!");
+            employeeServicesList.Remove(get);
+
+            return "Messege: Removed Successfully!";
         }
     }
 }
