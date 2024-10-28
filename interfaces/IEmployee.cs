@@ -12,5 +12,6 @@ namespace Enumerations_Practice.interfaces
         EmployeeService GetEmployee(int id);
         string UpdateEmployee(int id, EmployeeService service);
         string RemoveEmployee(int id);
+        string GetEmployeeType(int id);
     }
 }

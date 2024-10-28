@@ -83,5 +83,14 @@ namespace Enumerations_Practice.models
 
             return "Messege: Removed Successfully!";
         }
+        public string GetEmployeeType(int id)
+        {
+            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
+
+            EmployeeService get = employeeServicesList.FirstOrDefault(single => single.Employee_ID == id);
+            if(get == null) throw new ArgumentException("Empty Employee Lists!");
+
+            return get.Employee_Type;
+        }
     }
 }

@@ -47,8 +47,9 @@ namespace Enumerations_Practice
                 employees.CreateEmployee(InternEmployee);
                 employees.CreateEmployee(ContractEmployee);
                 employees.PrintEmployee(3);
-                Console.WriteLine(employees.UpdateEmployee(3, PartTimeEmployeeUpdatedToFulltime));
                 employees.PrintEmployee(2);
+                Console.WriteLine($"Employee Type: {employees.GetEmployeeType(3)}");
+                Console.WriteLine(employees.UpdateEmployee(3, PartTimeEmployeeUpdatedToFulltime));
 
                 EmployeeService getEmployee = employees.GetEmployee(3);
                 Console.WriteLine($"--------------\nEmployee ID: {getEmployee.Employee_ID}");
