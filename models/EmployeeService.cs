@@ -48,7 +48,7 @@ namespace Enumerations_Practice.models
         {
             employeeServicesList.Add(employee);
         }
-        public EmployeeService GetEmployee(int id, EmployeeService employee)
+        public EmployeeService GetEmployee(int id)
         {
             if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
 
@@ -57,6 +57,21 @@ namespace Enumerations_Practice.models
             if(foundEmployee == null) throw new ArgumentException("Empty Employee Lists!");
 
             return foundEmployee;
+        }
+        public string UpdateEmployee(int id, EmployeeService service)
+        {
+            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
+
+            EmployeeService getEmployee = employeeServicesList.FirstOrDefault(single => single.EmployeeID == id);
+            if(getEmployee == null) throw new ArgumentException("Empty Employee Lists!");
+
+            employeeServicesList.Remove(getEmployee);
+            getEmployee.Employee_ID = service.Employee_ID;
+            getEmployee.Employee_Name = service.Employee_Name;
+            getEmployee.Employee_Type = service.Employee_Type;
+            employeeServicesList.Add(getEmployee);
+            
+            return "Messege: Updated Successfully!";
         }
     }
 }

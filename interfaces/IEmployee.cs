@@ -9,7 +9,8 @@ namespace Enumerations_Practice.interfaces
     public interface IEmployee
     {
         void CreateEmployee(EmployeeService employee);
-        EmployeeService GetEmployee(int id, EmployeeService employee);
+        EmployeeService GetEmployee(int id);
+        string UpdateEmployee(int id, EmployeeService service);
         
     }
 }

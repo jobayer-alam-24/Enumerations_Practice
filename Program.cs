@@ -29,6 +29,12 @@ namespace Enumerations_Practice
                     Employee_Name = "Mirza Karim",
                     Employee_Type = EmployeeTypes.PartTime.ToString()
                 };
+                EmployeeService PartTimeEmployeeUpdatedToFulltime = new EmployeeService
+                {
+                    Employee_ID = 3,
+                    Employee_Name = "Mirza Karim Kaka",
+                    Employee_Type = EmployeeTypes.FullTime.ToString()
+                };
                 EmployeeService ContractEmployee = new EmployeeService
                 {
                     Employee_ID = 4,
@@ -40,7 +46,15 @@ namespace Enumerations_Practice
                 employees.CreateEmployee(PartTimeEmployee);
                 employees.CreateEmployee(InternEmployee);
                 employees.CreateEmployee(ContractEmployee);
+                employees.PrintEmployee(3);
+                employees.UpdateEmployee(3, PartTimeEmployeeUpdatedToFulltime);
                 employees.PrintEmployee(2);
+
+                EmployeeService getEmployee = employees.GetEmployee(3);
+                Console.WriteLine($"--------------\nEmployee ID: {getEmployee.Employee_ID}");
+                Console.WriteLine($"Employee Name: {getEmployee.Employee_Name}");
+                Console.WriteLine($"Employee Type: {getEmployee.Employee_Type}");
+
             }
             catch(Exception ex)
             {
