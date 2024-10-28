@@ -30,9 +30,9 @@ namespace Enumerations_Practice.models
         }
         public void PrintEmployee(int id)
         {
-            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
+            CheckID(id);
             EmployeeService getEmployee = employeeServicesList.FirstOrDefault(single => single.Employee_ID == id);
-            if(getEmployee == null) throw new ArgumentException("Empty List! Could not Found.");
+            CheckNull(getEmployee);
 
             Console.WriteLine($"=------Employee Information---------=");
             Console.WriteLine($"Employee ID: {getEmployee.Employee_ID}");
@@ -50,20 +50,17 @@ namespace Enumerations_Practice.models
         }
         public EmployeeService GetEmployee(int id)
         {
-            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
-
+            CheckID(id);
             EmployeeService foundEmployee = employeeServicesList.FirstOrDefault(singleEmployee => singleEmployee.Employee_ID == id);
-
-            if(foundEmployee == null) throw new ArgumentException("Empty Employee Lists!");
+            CheckNull(foundEmployee);
 
             return foundEmployee;
         }
         public string UpdateEmployee(int id, EmployeeService service)
         {
-            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
-
+            CheckID(id);
             EmployeeService getEmployee = employeeServicesList.FirstOrDefault(single => single.EmployeeID == id);
-            if(getEmployee == null) throw new ArgumentException("Empty Employee Lists!");
+            CheckNull(getEmployee);
 
             employeeServicesList.Remove(getEmployee);
             getEmployee.Employee_ID = service.Employee_ID;
@@ -75,22 +72,27 @@ namespace Enumerations_Practice.models
         }
         public string RemoveEmployee(int id)
         {
-            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
-            
+            CheckID(id);
             EmployeeService get = employeeServicesList.FirstOrDefault(single => single.Employee_ID == id);
-            if(get == null) throw new ArgumentException("Empty Employee Lists!");
+            CheckNull(get);
             employeeServicesList.Remove(get);
 
             return "Messege: Removed Successfully!";
         }
         public string GetEmployeeType(int id)
         {
-            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
-
+            CheckID(id);
             EmployeeService get = employeeServicesList.FirstOrDefault(single => single.Employee_ID == id);
-            if(get == null) throw new ArgumentException("Empty Employee Lists!");
-
+            CheckNull(get);
             return get.Employee_Type;
+        }
+        private void CheckID(int id)
+        {
+            if(id <= 0) throw new ArgumentException("Invalid ID! Must be Positive Integer.");
+        }
+        private void CheckNull(EmployeeService service)
+        {
+            if(service == null) throw new ArgumentException("Empty Employee Lists!");
         }
     }
 }
